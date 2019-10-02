@@ -14,7 +14,7 @@ import com.google.gson.annotations.Until;
 import com.trademark.pages.CaseDetailsPage;
 import com.trademark.pages.HomePage;
 import com.trademark.utils.CommonMethods;
-import com.trademark.utils.Constant;
+import com.trademark.utils.Constants;
 
 public class HomePageTest extends CommonMethods {
 
@@ -86,6 +86,8 @@ public class HomePageTest extends CommonMethods {
 
 		}
 		basis.get(4).click();
+		
+		
 
 		new WebDriverWait(driver, 15).until(ExpectedConditions.visibilityOfAllElements(h.issuesList));
 		List<WebElement> issueList = h.issuesList;
@@ -97,6 +99,8 @@ public class HomePageTest extends CommonMethods {
 			new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOf(h.recordsCount));
 
 			records = h.recordsCount.getText();
+			System.out.println(records);
+			
 			
 			Thread.sleep(100);
 
@@ -110,6 +114,9 @@ public class HomePageTest extends CommonMethods {
 		}
 		
 
+		
+		
+		
 		try {
 
 			new WebDriverWait(driver,3).until(ExpectedConditions.visibilityOf(h.serialNumber));
@@ -121,24 +128,29 @@ public class HomePageTest extends CommonMethods {
 		} catch (Exception ex) {
 			ex.getStackTrace();
 		}
+		
+		
+		String actual=null;
+		String expected=null;
 
 		try {
 			
 			c=new CaseDetailsPage();
 			
 			new WebDriverWait(driver, 3).until(ExpectedConditions.visibilityOf(c.basisInformation));
-			//System.out.println(c.basisInformation.getText());
-			String actual=c.basisInformation.getText();
-			String expected="44(d), filed 44d, filed itu, 1(a)";
 			
-			
-			
-			Assert.assertEquals(actual, expected);
+			 actual=c.basisInformation.getText();
+			 expected="filed 44d";
+				
 
 		} catch (Exception ex) {
 			ex.getStackTrace();
 		}
 
+		
+		boolean flag=actual.contains(expected);
+		
+		Assert.assertTrue(flag);
 		
 
 	}

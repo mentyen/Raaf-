@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
@@ -25,36 +26,51 @@ public class BaseClass {
 	public static ExtentHtmlReporter htmlReport;
 	public static ExtentReports report;
 	public static ExtentTest test;
+	public static WebDriver driver; 	
 	
-	public static WebDriver driver; 
 	
 	@BeforeMethod(alwaysRun=true)
 	public void setUp() {
 		
-		String url=ConfigsReader.getProperty("url");
-		String browser=ConfigsReader.getProperty("browser");
-		
-		if(browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", Constant.CHROME_PATH);
-			driver=new ChromeDriver();
-			driver.manage().window().fullscreen();
-			driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			
-			driver.get(url);	
-			
-		}else if(browser.equalsIgnoreCase("firefox")){
-			System.setProperty("webdriver.gecko.driver", Constant.FIREFOX_PATH);
-			driver=new FirefoxDriver();
-			driver.manage().window().fullscreen();
-			driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			
-			driver.get(url);
-		}
-		
-	
-		
+		   String browserName = ConfigsReader.getProperty("browser");
+	        if (browserName.equalsIgnoreCase("chrome")) {
+	            if (Constants.OS_NAME.contains("Mac")) {
+	                System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
+	            } else if (Constants.OS_NAME.contains("Windows")) {
+	                System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+	            } else if (Constants.OS_NAME.contains("Linux")) {
+	                System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+	                }
+	            driver = new ChromeDriver();
+	            //options=new ChromeOptions();
+	            // options.addArguments("--headless", "--disale-gpu");
+	             //driver = new ChromeDriver(options);
+	        } else if (browserName.equalsIgnoreCase("firefox")) {
+	            if (Constants.OS_NAME.contains("Mac")) {
+	                System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver");
+	            } else if (Constants.OS_NAME.contains("Windows")) {
+	                System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
+	            } else if (Constants.OS_NAME.contains("Linux")) {
+	                System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+	                }
+	            driver = new FirefoxDriver();
+	            //options=new ChromeOptions();
+	            // options.addArguments("--headless", "--disale-gpu");
+	             //driver = new ChromeDriver(options);
+	        } else if (browserName.equalsIgnoreCase("ie")) {
+	            System.setProperty("webdriver.ie.driver", "src/test/resources/drivers/IEDriverServer");
+	            driver = new InternetExplorerDriver();
+	            //options=new ChromeOptions();
+	            // options.addArguments("--headless", "--disale-gpu");
+	             //driver = new ChromeDriver(options);
+	        } else {
+	            System.out.println("browser given is wrong");
+	        }
+	        driver.manage().timeouts().pageLoadTimeout(45, TimeUnit.SECONDS);
+	        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	        driver.manage().window().fullscreen();
+	        driver.get(ConfigsReader.getProperty("url"));
+	    		
 		
 	}
 	
@@ -63,23 +79,26 @@ public class BaseClass {
 	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
 		
-		driver.close();
+		driver.quit();
+		//options=new ChromeOptions();
+        // options.addArguments("--headless", "--disale-gpu");
+         //driver = new ChromeDriver(options);
 		
 	}
 	
 	
 	@BeforeTest(alwaysRun=true)
 	public void generateReport() {
-		ConfigsReader.getProperty(Constant.EXCELL_PATH);
+		ConfigsReader.getProperty(Constants.EXCELL_PATH);
 		//create an object of extentReport and htmlReporter
-		htmlReport=new ExtentHtmlReporter(Constant.REPORT_FILEPATH);
+		htmlReport=new ExtentHtmlReporter(Constants.REPORT_FILEPATH);
 		report = new ExtentReports();
 		report.attachReporter(htmlReport);
 		//provide some info (optional)
-		report.setSystemInfo("OS", Constant.OS_NAME);
+		report.setSystemInfo("OS", Constants.OS_NAME);
 		report.setSystemInfo("Environment", "Test");
 		report.setSystemInfo("Browser", ConfigsReader.getProperty("browser"));
-		report.setSystemInfo("QA Engineer", Constant.USER_NAME);
+		report.setSystemInfo("QA Engineer", Constants.USER_NAME);
 	}
 	
 	@AfterTest (alwaysRun = true)

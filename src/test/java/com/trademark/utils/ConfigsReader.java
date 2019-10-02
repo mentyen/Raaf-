@@ -12,7 +12,7 @@ public class ConfigsReader {
 		Properties prop=new Properties();
 		
 		try {
-			prop.load(new FileInputStream(Constant.CREDENTIAL_PATH));
+			prop.load(new FileInputStream(Constants.CREDENTIAL_PATH));
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

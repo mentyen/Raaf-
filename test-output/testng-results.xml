@@ -2,35 +2,35 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14273" started-at="2019-10-02T17:18:40 EDT" finished-at="2019-10-02T17:18:54 EDT">
+  <suite name="Suite" duration-ms="12906" started-at="2019-10-02T19:25:00 EDT" finished-at="2019-10-02T19:25:13 EDT">
     <groups>
       <group name="smoke">
-        <method signature="HomePageTest.homePageOne()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="homePageOne" class="com.trademark.testcases.HomePageTest"/>
+        <method signature="HomePageTest.homePageOne()[pri:0, instance:com.trademark.testcases.HomePageTest@4b1c1ea0]" name="homePageOne" class="com.trademark.testcases.HomePageTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="14273" started-at="2019-10-02T17:18:40 EDT" finished-at="2019-10-02T17:18:54 EDT">
+    <test name="Test" duration-ms="12906" started-at="2019-10-02T19:25:00 EDT" finished-at="2019-10-02T19:25:13 EDT">
       <class name="com.trademark.testcases.HomePageTest">
-        <test-method status="PASS" signature="generateReport()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="generateReport" is-config="true" duration-ms="117" started-at="2019-10-02T17:18:40 EDT" finished-at="2019-10-02T17:18:40 EDT">
+        <test-method status="PASS" signature="generateReport()[pri:0, instance:com.trademark.testcases.HomePageTest@4b1c1ea0]" name="generateReport" is-config="true" duration-ms="118" started-at="2019-10-02T19:25:00 EDT" finished-at="2019-10-02T19:25:00 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="setUp" is-config="true" duration-ms="7448" started-at="2019-10-02T17:18:40 EDT" finished-at="2019-10-02T17:18:48 EDT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.trademark.testcases.HomePageTest@4b1c1ea0]" name="setUp" is-config="true" duration-ms="7908" started-at="2019-10-02T19:25:01 EDT" finished-at="2019-10-02T19:25:08 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="homePageOne()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="homePageOne" duration-ms="4349" started-at="2019-10-02T17:18:48 EDT" finished-at="2019-10-02T17:18:52 EDT">
+        <test-method status="PASS" signature="homePageOne()[pri:0, instance:com.trademark.testcases.HomePageTest@4b1c1ea0]" name="homePageOne" duration-ms="4251" started-at="2019-10-02T19:25:08 EDT" finished-at="2019-10-02T19:25:13 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homePageOne -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="tearDown" is-config="true" duration-ms="2327" started-at="2019-10-02T17:18:52 EDT" finished-at="2019-10-02T17:18:54 EDT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.trademark.testcases.HomePageTest@4b1c1ea0]" name="tearDown" is-config="true" duration-ms="594" started-at="2019-10-02T19:25:13 EDT" finished-at="2019-10-02T19:25:13 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="flushReport()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="flushReport" is-config="true" duration-ms="3" started-at="2019-10-02T17:18:54 EDT" finished-at="2019-10-02T17:18:54 EDT">
+        <test-method status="PASS" signature="flushReport()[pri:0, instance:com.trademark.testcases.HomePageTest@4b1c1ea0]" name="flushReport" is-config="true" duration-ms="1" started-at="2019-10-02T19:25:13 EDT" finished-at="2019-10-02T19:25:13 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->
       </class> <!-- com.trademark.testcases.HomePageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
