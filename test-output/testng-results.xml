@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14419" started-at="2019-10-02T06:52:36 EDT" finished-at="2019-10-02T06:52:50 EDT">
+  <suite name="Default suite" duration-ms="14273" started-at="2019-10-02T17:18:40 EDT" finished-at="2019-10-02T17:18:54 EDT">
     <groups>
       <group name="smoke">
         <method signature="HomePageTest.homePageOne()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="homePageOne" class="com.trademark.testcases.HomePageTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="14419" started-at="2019-10-02T06:52:36 EDT" finished-at="2019-10-02T06:52:50 EDT">
+    <test name="Default test" duration-ms="14273" started-at="2019-10-02T17:18:40 EDT" finished-at="2019-10-02T17:18:54 EDT">
       <class name="com.trademark.testcases.HomePageTest">
-        <test-method status="PASS" signature="generateReport()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="generateReport" is-config="true" duration-ms="114" started-at="2019-10-02T06:52:36 EDT" finished-at="2019-10-02T06:52:36 EDT">
+        <test-method status="PASS" signature="generateReport()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="generateReport" is-config="true" duration-ms="117" started-at="2019-10-02T17:18:40 EDT" finished-at="2019-10-02T17:18:40 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateReport -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="setUp" is-config="true" duration-ms="7125" started-at="2019-10-02T06:52:36 EDT" finished-at="2019-10-02T06:52:43 EDT">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="setUp" is-config="true" duration-ms="7448" started-at="2019-10-02T17:18:40 EDT" finished-at="2019-10-02T17:18:48 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="homePageOne()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="homePageOne" duration-ms="7047" started-at="2019-10-02T06:52:43 EDT" finished-at="2019-10-02T06:52:50 EDT">
+        <test-method status="PASS" signature="homePageOne()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="homePageOne" duration-ms="4349" started-at="2019-10-02T17:18:48 EDT" finished-at="2019-10-02T17:18:52 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homePageOne -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="tearDown" is-config="true" duration-ms="97" started-at="2019-10-02T06:52:50 EDT" finished-at="2019-10-02T06:52:50 EDT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="tearDown" is-config="true" duration-ms="2327" started-at="2019-10-02T17:18:52 EDT" finished-at="2019-10-02T17:18:54 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="flushReport()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="flushReport" is-config="true" duration-ms="3" started-at="2019-10-02T06:52:50 EDT" finished-at="2019-10-02T06:52:50 EDT">
+        <test-method status="PASS" signature="flushReport()[pri:0, instance:com.trademark.testcases.HomePageTest@48503868]" name="flushReport" is-config="true" duration-ms="3" started-at="2019-10-02T17:18:54 EDT" finished-at="2019-10-02T17:18:54 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushReport -->

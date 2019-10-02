@@ -57,5 +57,12 @@ public class HomePage extends BaseClass {
 
 	@FindBy(xpath = "//*[@class=\"container-fluid\"]//*[@class=\"row noResultTile\"]/div/h3")
 	public WebElement noRecordFound;
+	
+	
+	@FindBy(xpath="//span[contains(text(),'Serial Number:')]")
+	public WebElement serialNumber;
+	
+
+	
 
 }
